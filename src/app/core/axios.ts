@@ -1,3 +1,4 @@
+"use server";
 import axios, { InternalAxiosRequestConfig } from "axios";
 import { parseCookies } from "nookies";
 

@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
               defaultSelectedKeys={[selectedMenu]}
               onSelect={({ key }) => router.push(key)}
               items={[
-                { key: "/dashboard/main", label: "Main" },
+                { key: "/dashboard/files", label: "Main" },
                 { key: "/dashboard/profile", label: "Profile" },
               ]}
             />

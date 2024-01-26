@@ -23,7 +23,7 @@ export const FileCard: React.FC<FileCardProps> = ({
   return (
     <div className={styles.root}>
       <div className={styles.icon}>
-        <i className={styles.classColor}>{ext}</i>
+        <i className={classColor}>{ext}</i>
         {isImage(ext) ? (
           <img className={styles.image} src={imageUrl} alt="File" />
         ) : (
