@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
               className={styles.topMenu}
               theme="dark"
               mode="horizontal"
-              defaultSelectedKeys={[selectedMenu]}
+              selectedKeys={[selectedMenu]}
               onSelect={({ key }) => router.push(key)}
               items={[
                 { key: "/dashboard/files", label: "Main" },

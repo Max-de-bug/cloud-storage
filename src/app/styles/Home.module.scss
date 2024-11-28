@@ -1,18 +1,21 @@
 .body {
   margin: 0px;
-  background-color: lightgray;
+  background-color: #36164bdd;
 }
 
 .main {
-  width: 1200px;
-  margin: 40px auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 48px auto;
+  padding: 0 32px;
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 250px;
-  padding: 20px;
+  width: 280px;
+  padding: 32px 24px;
+  background: #001529;
 }
 
 .upload {
@@ -25,23 +28,50 @@
 .layout {
   display: flex;
   flex-direction: row;
-  min-height: 600px;
-  background: #fff;
-  border-radius: 15px;
+  min-height: 700px;
+  background-color: #36164bdd;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%;
 
   h1 {
     margin: 5px;
   }
 }
 
-.container {
-  width: 100%;
-}
-
 .menu {
   margin-top: 20px;
   padding-right: 10px;
   height: 100%;
+  background-color: #36164bdd;
+
+  :global {
+    .ant-menu-item {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      .anticon {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+
+      &:hover {
+        color: #ffffff !important;
+
+        .anticon {
+          color: #ffffff !important;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        color: #ffffff !important;
+
+        .anticon {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
 }
 
 .dashboardContainer {

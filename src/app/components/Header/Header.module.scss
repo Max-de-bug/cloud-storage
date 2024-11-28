@@ -1,22 +1,28 @@
+@import "../../styles/variables";
+
 .root {
-  background-color: #0071ce !important;
+  background: $primary-gradient !important;
+  backdrop-filter: blur(10px);
+  box-shadow: $shadow-sm;
   display: flex;
   align-items: center;
 
   h2 {
     color: #fff;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      sans-serif;
     position: relative;
     top: -2px;
-    font-size: 20px;
-    font-family: "Segoe UI";
     margin-right: 30px;
+    letter-spacing: -0.5px;
 
     svg {
-      font-size: 24px;
+      font-size: 26px;
       position: relative;
       top: 1px;
-      margin-right: 10px;
+      margin-right: 12px;
     }
   }
 
@@ -41,12 +47,13 @@
 }
 
 .topMenu {
-  min-width: 200px;
+  min-width: 220px;
   :global {
     .ant-menu-item-selected {
       color: #ffffff !important;
-      background-color: rgb(255 255 255 / 15%) !important;
-      border-radius: 0 !important;
+      background-color: rgba(42, 23, 29, 0.18) !important;
+      backdrop-filter: blur(12px);
+      border-radius: $border-radius-md !important;
     }
   }
 }

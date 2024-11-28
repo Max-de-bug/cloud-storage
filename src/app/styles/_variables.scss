@@ -1,0 +1,151 @@
+@use "sass:color";
+
+// Variables
+$primary-gradient: linear-gradient(90deg, #4f46e5, #6366f1);
+$primary-color: #1890ff;
+$background-color: #f0f2f5;
+$text-color: #333;
+$sidebar-width: 250px;
+$border-radius-md: 12px;
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: #001529;
+  color: white;
+  padding: 20px;
+
+  &__logo {
+    @include flex-center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding: 0;
+
+    &-item {
+      margin-bottom: 10px;
+
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &:hover,
+        &.active {
+          background-color: color.scale($primary-color, $lightness: -20%);
+        }
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.file-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &__icon {
+    @include flex-center;
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__info {
+    font-size: 12px;
+    color: #666;
+  }
+
+  &__actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.upload-area {
+  border: 2px dashed $primary-color;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: color.scale($primary-color, $lightness: 90%);
+  }
+}
+
+.user-profile {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  &__avatar {
+    @include flex-center;
+    margin-bottom: 20px;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}

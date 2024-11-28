@@ -17,6 +17,7 @@ export const DashboardLayout: React.FC<React.PropsWithChildren> = ({
         <Menu
           className={styles.menu}
           mode="inline"
+          theme="dark"
           selectedKeys={[selectedmenu]}
           items={[
             {
